@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #582E66;
+}
+
+.blurAlrededor {
+    box-shadow: inset 0 0 50px 50px #582E66;
+
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+
+}
+
+.fondoPpal{
+    background-image: url('./../imgs/fondoBrujasExpand.jpg');
+}
+
+.fondoEstanteria{
+    background-image: url('./../imgs/fondoEstanteriaDesktop.jpg');
+    background-size: cover;
+}
+
+.fondoMesa{
+    background-image: url('./../imgs/fondoMesa.png');
+    background-size: 140%;
+    background-position: center;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo {
+    margin-top: 3%;
+    height: 15%;
+}
+
+#elementosMesa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+    height: 70%;
+    width: 90%;
+
+}
+
+#bola, #etiquetaBola {
+    height: 55%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 1mm 1mm rgb(41, 31, 25));
+}
+
+#etiquetaBola{
+    height: 30%;
+    top: 30%;
+}
+
+#grimorio, #etiquetaGrimorio {
+    height: 60%;
+    position: absolute;
+    right: 15%;
+    bottom: 15%;
+    filter: drop-shadow(0 1mm 1mm rgb(41, 31, 25));
+}
+
+#etiquetaGrimorio{
+    height: 30%;
+    right: 6%;
+}
+
+#noticias, #etiquetaNoticias {
+    height: 50%;
+    position: absolute;
+    bottom: 5%;
+    left: 41%;
+    filter: drop-shadow(0 2mm 4mm rgb(41, 31, 25));
+}
+
+#etiquetaNoticias {
+    height: 30%;
+    left: 40%;
+    bottom: 0;
+}
+
+#sombrero, #etiquetaSombrero {
+    height: 70%;
+    position: absolute;
+    top: 2%;
+    left: 20%;
+    filter: drop-shadow(0 2mm 4mm rgb(41, 31, 25));
+}
+
+#etiquetaSombrero {
+    height: 30%;
+    top: 40%;
+}
+
+#runas, #etiquetaRunas {
+    height: 40%;
+    position: absolute;
+    bottom: 5%;
+    left: 15%;
+    filter: drop-shadow(0 2mm 4mm rgb(41, 31, 25));
+}
+
+#etiquetaRunas{
+    height: 30%;
+    left: 6%;
+}
+
+#elementosMesa > *:hover,
+#contenedorLibros > *:hover{
+    cursor: pointer;
+}
+
+#contenedorLibros{
+    position: fixed;
+    height: 80%;
+    width: 50%;
+    transform: translateY(20%);
+
+    display: flex;
+    align-items: last baseline;
+}
+
+#mitologia{
+    height: 98%;
+    position: absolute;
+    left: 12%;
+    bottom: -1%;
+}
+
+#literatura{
+    height: 95%;
+    position: absolute;
+    left: 28%;
+    bottom: -1%;
+
+}
+
+#modernas{
+    height: 87%;
+    position: absolute;
+    left: 44%;
+    bottom: -1%;
+
+}
+
+#elementos{
+    height: 91%;
+    position: absolute;
+    left: 58%;
+    bottom: -1%;
+}
+
+.displayNone{
+    display: none;
+}
+
+#libro{
+    background-image: url('./../imgs/libro/libro.png');
+    background-size: cover;
+    height: 80%;
+}
+
+
