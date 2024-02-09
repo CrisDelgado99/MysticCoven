@@ -1,5 +1,6 @@
 class Bruja{
-    constructor(titulo, img, descripcion){
+    constructor(id, titulo, img, descripcion){
+        this.id = id;
         this.titulo = titulo;
         this.img = img;
         this.descripcion = descripcion;
@@ -33,5 +34,7 @@ class Bruja{
     }
 
     //otros métodos
-    impBruja
+    impBruja(){
+
+    }
 }

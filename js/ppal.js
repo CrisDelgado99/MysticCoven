@@ -1,4 +1,4 @@
-const divElementosMesa = document.querySelector('#elementosMesa');
+const divElementosMesa = document.querySelector('#mesa');
 
 divElementosMesa.addEventListener('mouseover', e=>{
     let elemento = e.target;
@@ -32,7 +32,6 @@ function desactivarHover(elemento, carpeta){
 function mostrarEtiqueta(elemento){
     let idElemento = elemento.id;
     let etiqueta = 'etiqueta' + idElemento.charAt(0).toUpperCase() + idElemento.slice(1);
-    console.log(etiqueta);
     const elementoEtiqueta = document.querySelector('#' + etiqueta);
 
     elementoEtiqueta.classList.remove('displayNone');
@@ -41,7 +40,6 @@ function mostrarEtiqueta(elemento){
 function esconderEtiqueta(elemento){
     let idElemento = elemento.id;
     let etiqueta = 'etiqueta' + idElemento.charAt(0).toUpperCase() + idElemento.slice(1);
-    console.log(etiqueta);
     const elementoEtiqueta = document.querySelector('#' + etiqueta);
 
     elementoEtiqueta.classList.add('displayNone');

@@ -22,7 +22,7 @@ body {
 }
 
 .fondoEstanteria{
-    background-image: url('./../imgs/fondoEstanteriaDesktop.jpg');
+    background-image: url('./../imgs/fondoEstanteriaDesktop.png');
     background-size: cover;
 }
 
@@ -46,7 +46,7 @@ main {
     height: 15%;
 }
 
-#elementosMesa {
+#mesa {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,16 +54,21 @@ main {
     bottom: 0px;
     height: 70%;
     width: 90%;
-
 }
 
-#bola, #etiquetaBola {
+.mesa__elemento, .mesa__etiqueta{
+    position: absolute;
+    filter: drop-shadow(0 1mm 1mm rgb(41, 31, 25));
+}
+
+
+.mesa__elemento--bola, #etiquetaBola {
     height: 55%;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    filter: drop-shadow(0 1mm 1mm rgb(41, 31, 25));
+    
 }
 
 #etiquetaBola{
@@ -71,12 +76,10 @@ main {
     top: 30%;
 }
 
-#grimorio, #etiquetaGrimorio {
+.mesa__elemento--grimorio, #etiquetaGrimorio {
     height: 60%;
-    position: absolute;
     right: 15%;
     bottom: 15%;
-    filter: drop-shadow(0 1mm 1mm rgb(41, 31, 25));
 }
 
 #etiquetaGrimorio{
@@ -84,12 +87,10 @@ main {
     right: 6%;
 }
 
-#noticias, #etiquetaNoticias {
+.mesa__elemento--noticias, #etiquetaNoticias {
     height: 50%;
-    position: absolute;
     bottom: 5%;
     left: 41%;
-    filter: drop-shadow(0 2mm 4mm rgb(41, 31, 25));
 }
 
 #etiquetaNoticias {
@@ -98,12 +99,10 @@ main {
     bottom: 0;
 }
 
-#sombrero, #etiquetaSombrero {
+.mesa__elemento--sombrero, #etiquetaSombrero {
     height: 70%;
-    position: absolute;
     top: 2%;
     left: 20%;
-    filter: drop-shadow(0 2mm 4mm rgb(41, 31, 25));
 }
 
 #etiquetaSombrero {
@@ -111,12 +110,10 @@ main {
     top: 40%;
 }
 
-#runas, #etiquetaRunas {
+.mesa__elemento--runas, #etiquetaRunas {
     height: 40%;
-    position: absolute;
     bottom: 5%;
     left: 15%;
-    filter: drop-shadow(0 2mm 4mm rgb(41, 31, 25));
 }
 
 #etiquetaRunas{
@@ -124,7 +121,7 @@ main {
     left: 6%;
 }
 
-#elementosMesa > *:hover,
+#mesa > *:hover,
 #contenedorLibros > *:hover{
     cursor: pointer;
 }
