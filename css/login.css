@@ -130,3 +130,9 @@ input:focus{
 .icono{
     font-size:15px;
 }
+.zoomed{
+    transform: scale(2.5); /*aumenta la escala de la imagen*/
+    transform-origin: 80% 70%; /* 80% hacia la derecha y 70% hacia arriba y abajo*/
+    transition: all 2s; /*crea la transición de zoom suave*/
+    overflow: hidden;
+}
