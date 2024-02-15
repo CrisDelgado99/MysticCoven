@@ -1,4 +1,5 @@
 const divElementosMesa = document.querySelector('#mesa');
+const btnCerrarUsuario = document.querySelector('#btnCerrarUsuario');
 
 divElementosMesa.addEventListener('mouseover', e=>{
     let elemento = e.target;

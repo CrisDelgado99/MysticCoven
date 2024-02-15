@@ -1,3 +1,15 @@
+/*FUENTES*/
+@font-face {
+    font-family: "Irish Grover";
+    src: url(./../fonts/IrishGrover-Regular.ttf);
+}
+@font-face {
+    font-family: "Itim";
+    src: url(./../fonts/Itim-Regular.ttf);
+}
+
+/*ESTILOS GENERALES*/
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,10 +18,12 @@
 
 body {
     background-color: #582E66;
+    font-size: 62.5%;
 }
 
 .blurAlrededor {
     box-shadow: inset 0 0 50px 50px #582E66;
+    z-index: 4;
 
     background-repeat: no-repeat;
     background-size: 100%;
@@ -17,18 +31,37 @@ body {
 
 }
 
+
+/*BOTONES GENERALES*/
+
+.btn{
+    background-color: #EBD18E;
+    border: 5px solid #7D6835;
+    border-radius: 23px;
+    box-shadow: 1px 8px 6px -6px rgba(0,0,0,0.37);
+    font-family: Itim;
+    color:#382e19;
+    font-size: 15px;
+}
+
+button:focus{
+    box-shadow: inset 1px 8px 6px -6px rgba(0,0,0,0.37);
+}
+
+
 .fondoPpal{
     background-image: url('./../imgs/fondoBrujasExpand.jpg');
 }
 
 .fondoEstanteria{
     background-image: url('./../imgs/fondoEstanteriaDesktop.png');
-    background-size: cover;
+    background-size: 100%;
+    background-position: center;
 }
 
 .fondoMesa{
     background-image: url('./../imgs/fondoMesa.png');
-    background-size: 140%;
+    background-size: cover;
     background-position: center;
 }
 
@@ -46,134 +79,31 @@ main {
     height: 15%;
 }
 
-#mesa {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    bottom: 0px;
-    height: 70%;
-    width: 90%;
-}
-
-.mesa__elemento, .mesa__etiqueta{
-    position: absolute;
-    filter: drop-shadow(0 1mm 1mm rgb(41, 31, 25));
-}
-
-
-.mesa__elemento--bola, #etiquetaBola {
-    height: 55%;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    
-}
-
-#etiquetaBola{
-    height: 30%;
-    top: 30%;
-}
-
-.mesa__elemento--grimorio, #etiquetaGrimorio {
-    height: 60%;
-    right: 15%;
-    bottom: 15%;
-}
-
-#etiquetaGrimorio{
-    height: 30%;
-    right: 6%;
-}
-
-.mesa__elemento--noticias, #etiquetaNoticias {
-    height: 50%;
-    bottom: 5%;
-    left: 41%;
-}
-
-#etiquetaNoticias {
-    height: 30%;
-    left: 40%;
-    bottom: 0;
-}
-
-.mesa__elemento--sombrero, #etiquetaSombrero {
-    height: 70%;
-    top: 2%;
-    left: 20%;
-}
-
-#etiquetaSombrero {
-    height: 30%;
-    top: 40%;
-}
-
-.mesa__elemento--runas, #etiquetaRunas {
-    height: 40%;
-    bottom: 5%;
-    left: 15%;
-}
-
-#etiquetaRunas{
-    height: 30%;
-    left: 6%;
-}
-
-#mesa > *:hover,
-#contenedorLibros > *:hover{
-    cursor: pointer;
-}
-
-#contenedorLibros{
-    position: fixed;
-    height: 80%;
-    width: 50%;
-    transform: translateY(20%);
-
-    display: flex;
-    align-items: last baseline;
-}
-
-#mitologia{
-    height: 98%;
-    position: absolute;
-    left: 12%;
-    bottom: -1%;
-}
-
-#literatura{
-    height: 95%;
-    position: absolute;
-    left: 28%;
-    bottom: -1%;
-
-}
-
-#modernas{
-    height: 87%;
-    position: absolute;
-    left: 44%;
-    bottom: -1%;
-
-}
-
-#elementos{
-    height: 91%;
-    position: absolute;
-    left: 58%;
-    bottom: -1%;
-}
-
 .displayNone{
     display: none;
 }
 
-#libro{
-    background-image: url('./../imgs/libro/libro.png');
-    background-size: cover;
-    height: 80%;
+.libro__botones .btn, .btn--atras{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding:12px ;   
+    
+    cursor: pointer;
 }
 
+.btn--atras{
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+}
+
+.btn > svg{
+    width: 32px;
+    height: 32px;
+    color: #7D6835;
+    stroke-width: 0.3rem;
+    stroke-linejoin: miter;
+}
 

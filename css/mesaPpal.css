@@ -1,0 +1,166 @@
+.btn--salir{
+    top: 1rem;
+    left: auto;
+    right: 1rem;
+}
+
+#mesa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+    height: 70%;
+    width: 90%;
+
+}
+
+.mesa__elemento, .mesa__etiqueta{
+    position: absolute;
+    filter: drop-shadow(0 1mm 1mm rgb(41, 31, 25));
+}
+
+
+.mesa__elemento--bola, #etiquetaBola {
+    height: 50%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#etiquetaBola{
+    height: 30%;
+    top: 30%;
+}
+
+.mesa__elemento--grimorio, #etiquetaGrimorio {
+    height: 50%;
+    right: 15%;
+    bottom: 15%;
+}
+
+#etiquetaGrimorio{
+    height: 30%;
+    right: 6%;
+}
+
+.mesa__elemento--noticias, #etiquetaNoticias {
+    height: 45%;
+    bottom: 5%;
+    left: 41%;
+}
+
+#etiquetaNoticias {
+    height: 30%;
+    left: 40%;
+    bottom: 0;
+}
+
+.mesa__elemento--sombrero, #etiquetaSombrero {
+    height: 55%;
+    top: 2%;
+    left: 20%;
+}
+
+#etiquetaSombrero {
+    height: 30%;
+    top: 40%;
+}
+
+.mesa__elemento--runas, #etiquetaRunas {
+    height: 40%;
+    bottom: 5%;
+    left: 15%;
+}
+
+#etiquetaRunas{
+    height: 30%;
+    left: 6%;
+}
+
+#mesa > *:hover{
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+    .mesa__elemento--bola, #etiquetaBola {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .mesa__elemento--grimorio, #etiquetaGrimorio {
+        right: 10%;
+        bottom: 25%;
+    }
+
+    .mesa__elemento--noticias, #etiquetaNoticias {
+        bottom: 25%;
+        left: 41%;
+    }
+
+    .mesa__elemento--sombrero, #etiquetaSombrero {
+        top: 5%;
+        left: 15%;
+    }
+
+    .mesa__elemento--runas, #etiquetaRunas {
+        bottom: 15%;
+        left: 10%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .mesa__elemento--bola, #etiquetaBola {
+        height: 40%;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #etiquetaBola{
+        height: 20%;
+    }
+
+    .mesa__elemento--grimorio, #etiquetaGrimorio {
+        height: 40%;
+        right: 10%;
+        bottom: 25%;
+    }
+
+    #etiquetaGrimorio{
+        height: 20%;
+    }
+
+    .mesa__elemento--noticias, #etiquetaNoticias {
+        height: 40%;
+        bottom: 25%;
+        left: 41%;
+    }
+
+    #etiquetaNoticias{
+        height: 20%;
+    }
+
+    .mesa__elemento--sombrero, #etiquetaSombrero {
+        height: 40%;
+        top: 5%;
+        left: 15%;
+    }
+
+    #etiquetaSombrero{
+        height: 20%;
+    }
+
+    .mesa__elemento--runas, #etiquetaRunas {
+        height: 40%;
+        bottom: 15%;
+        left: 10%;
+    }
+
+    #etiquetaRunas{
+        height: 20%;
+    }
+}
+
+

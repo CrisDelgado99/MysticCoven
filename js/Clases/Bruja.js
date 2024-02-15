@@ -1,4 +1,4 @@
-class Bruja{
+export class Bruja{
     constructor(id, titulo, img, descripcion){
         this.id = id;
         this.titulo = titulo;
@@ -34,7 +34,11 @@ class Bruja{
     }
 
     //otros métodos
-    impBruja(){
-
+    impBruja(contTitulo, contImg, contDescripcion) {
+        contTitulo.innerHTML = this.titulo;
+        contImg.alt = this.titulo;
+        contImg.src = this.img;
+        contDescripcion.innerHTML = this.descripcion;
     }
 }
+

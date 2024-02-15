@@ -1,0 +1,172 @@
+/*----------------------------------------SECCIÓN DEL LIBRO ABIERTO------------------------------------*/
+
+.padreLibro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.libro{
+    background-image: url('./../imgs/libro/libro.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 88%;
+    width: 68%;
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.libro--animacion{
+    background: none;
+    position: absolute;
+
+    height: 101%;
+    width: 90%;;
+
+    top: -6%;
+
+    z-index: -2;
+}
+
+.animacion{
+    z-index: 4;
+    background-repeat: no-repeat;
+}
+
+.libro__pag{
+    padding: 3rem;
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.libro__pag > img{
+    width: 75%;
+    height: auto;
+    max-height: 20rem;
+}
+
+.pag1{
+    margin-left: 40px;
+}
+
+.pag2{
+    margin-right: 40px;
+}
+
+.pag2 > p{
+    width: 85%;
+    max-height: 80%;
+    overflow: scroll;
+    text-align: justify;
+    padding-right: 24px;
+    font-size: 16px;
+    scrollbar-color: #582E66 #F5E8C7;
+    font-family: 'Itim';
+}
+
+.pag2 > p li{
+    list-style-type: disc;
+}
+
+#titulo{
+    background-image: url('./../imgs/libro/tituloNombreBruja.png');
+    background-position: center;
+    background-size: 100% 100%;
+    padding: 12px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 45px;
+    text-align: center;
+    line-height: 0.8;
+    font-size: 32px;
+
+    font-family: 'Irish Grover';
+}
+
+.libro__botones{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    z-index: 0;
+}
+
+.libro__botones .btn--izq{
+    position: absolute;
+    left: 0px;
+}
+
+.libro__botones .btn--der{
+    position: absolute;
+    right: 0px;
+}
+
+
+
+.clase, .clase svg{
+    border-color: #382e19;
+    background-color: #7D6835;
+    color: #382e19;
+}
+
+#textoBruja{
+    cursor: n-resize;
+}
+
+@media only screen and (max-height: 539px) {
+    .libro__pag > img{
+        width: 50%;
+    }
+
+    #titulo{
+        font-size: 24px;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .libro__pag > img{
+        width: 50%;
+    }
+
+    .pag1{
+        margin-left: 1rem;
+        padding-right: 4rem;
+    }
+    
+    .pag2{
+        margin-right: 1rem;
+        padding-left: 3rem;
+    }
+    .libro__pag{
+        padding: 0.5rem;
+        padding-top: 2rem;
+    }
+
+    #titulo{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        max-width: 8rem;
+    }
+
+    .libro__botones{
+        width: 120%;
+        font-size: 24px;
+    }
+    
+
+}
+
+
