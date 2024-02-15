@@ -1,6 +1,54 @@
 const divElementosMesa = document.querySelector('#mesa');
-const btnCerrarUsuario = document.querySelector('#btnCerrarUsuario');
+const btnCerrarSesion = document.querySelector('#btnCerrarSesion');
+const modal = document.querySelector('#modal');
+const bodyBlur = document.querySelector('.bodyBlur');
 
+//--------------------------------------FUNCIONES-------------------------------------------------------------
+const activarHover = (elemento, carpeta) => {
+    let idElemento = elemento.id;
+    elemento.src = './imgs/' + carpeta + '/' + idElemento + 'Hover.png';
+}
+
+const mostrarEtiqueta = (elemento) => {
+    let idElemento = elemento.id;
+    let etiqueta = 'etiqueta' + idElemento.charAt(0).toUpperCase() + idElemento.slice(1);
+    const elementoEtiqueta = document.querySelector('#' + etiqueta);
+
+    elementoEtiqueta.classList.remove('displayNone');
+}
+
+const esconderEtiqueta = (elemento) =>{
+    let idElemento = elemento.id;
+    let etiqueta = 'etiqueta' + idElemento.charAt(0).toUpperCase() + idElemento.slice(1);
+    const elementoEtiqueta = document.querySelector('#' + etiqueta);
+
+    elementoEtiqueta.classList.add('displayNone');
+}
+const desactivarHover = (elemento, carpeta) => {
+    let idElemento = elemento.id;
+    elemento.src = './imgs/' + carpeta + '/' + idElemento + '.png';
+}
+
+const dispNoneRecursivo = (elemento) => {
+    console.log('Hiding element:', elemento);
+    
+    if (!elemento.classList.contains('displayNone')) {
+        elemento.classList.add('displayNone');
+        console.log('Added displayNone class to:', elemento);
+    }
+
+    Array.from(elemento.children).forEach(hijo => dispNoneRecursivo(hijo));
+}
+
+const quitarDispNoneRecursivo = (elemento) => {
+    if (elemento.classList.contains('displayNone')) {
+        elemento.classList.remove('displayNone');
+    }
+
+    Array.from(elemento.children).forEach(hijo => quitarDispNoneRecursivo(hijo));
+}
+
+//------------------------------------------EVENT LISTENERS----------------------------------------------------
 divElementosMesa.addEventListener('mouseover', e=>{
     let elemento = e.target;
     
@@ -20,28 +68,27 @@ divElementosMesa.addEventListener('mouseout', e=>{
     }
 });
 
-function activarHover(elemento, carpeta){
-    let idElemento = elemento.id;
-    elemento.src = './imgs/' + carpeta + '/' + idElemento + 'Hover.png';
-}
+modal.addEventListener('click', e => {
+    let elemento = e.target;
+    console.log('click');
 
-function desactivarHover(elemento, carpeta){
-    let idElemento = elemento.id;
-    elemento.src = './imgs/' + carpeta + '/' + idElemento + '.png';
-}
+    let button = elemento.closest('button');
+    
+    if (button) {
+        console.log('click button');
+        if (button.id == 'cerrarModal') {
+            dispNoneRecursivo(bodyBlur);
+        }
 
-function mostrarEtiqueta(elemento){
-    let idElemento = elemento.id;
-    let etiqueta = 'etiqueta' + idElemento.charAt(0).toUpperCase() + idElemento.slice(1);
-    const elementoEtiqueta = document.querySelector('#' + etiqueta);
+        if (button.id == 'cerrarSesion') {
 
-    elementoEtiqueta.classList.remove('displayNone');
-}
+        }
+    }
+});
 
-function esconderEtiqueta(elemento){
-    let idElemento = elemento.id;
-    let etiqueta = 'etiqueta' + idElemento.charAt(0).toUpperCase() + idElemento.slice(1);
-    const elementoEtiqueta = document.querySelector('#' + etiqueta);
+btnCerrarSesion.addEventListener('click', e => {
+    quitarDispNoneRecursivo(bodyBlur)
+});
 
-    elementoEtiqueta.classList.add('displayNone');
-}
+
+

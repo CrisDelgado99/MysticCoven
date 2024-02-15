@@ -15,6 +15,14 @@
 
 }
 
+.cerrarSesion{
+    padding: 1rem;
+    overflow: scroll;
+    scrollbar-color: #582E66 #F5E8C7;
+    position: relative;
+    width: 40%;
+}
+
 .mesa__elemento, .mesa__etiqueta{
     position: absolute;
     filter: drop-shadow(0 1mm 1mm rgb(41, 31, 25));
@@ -108,6 +116,7 @@
         bottom: 15%;
         left: 10%;
     }
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -161,6 +170,14 @@
     #etiquetaRunas{
         height: 20%;
     }
+
+    .cerrarSesion{
+        width: 70%;
+    }
+}
+
+.displayNone{
+    display: none;
 }
 
 
