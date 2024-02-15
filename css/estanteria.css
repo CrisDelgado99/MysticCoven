@@ -6,7 +6,7 @@
     position: fixed;
     height: 70%;
     width: 45%;
-    transform: translateY(20%);
+    transform: translateY(24%);
 
     display: flex;
     align-items: last baseline;
@@ -44,15 +44,6 @@
     position: absolute;
     left: 64%;
     bottom: -1%;
-}
-
-.estante{
-    position: absolute;
-    opacity: 100%;
-    z-index: 1;
-    bottom: 0px;
-    width: 100%;
-    height: 20%;
 }
 
 
