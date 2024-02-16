@@ -58,6 +58,7 @@
 .pag1{
     margin-left: 40px;
     overflow: scroll;
+    scrollbar-color: #582e66 #f5e8c7;
 }
 
 .pag2{
@@ -71,7 +72,7 @@
     text-align: justify;
     padding-right: 24px;
     font-size: 1.2rem;
-    scrollbar-color: #582E66 #F5E8C7;
+    scrollbar-color: #582e66 #f5e8c7;
     font-family: 'Itim';
 }
 
@@ -93,28 +94,6 @@
 
     font-family: 'Irish Grover';
 }
-
-.libro__botones{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-    z-index: 0;
-}
-
-.libro__botones .btn--izq{
-    position: absolute;
-    left: 0px;
-}
-
-.libro__botones .btn--der{
-    position: absolute;
-    right: 0px;
-}
-
-
 
 .clase, .clase svg{
     border-color: #382e19;

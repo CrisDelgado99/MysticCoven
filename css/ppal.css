@@ -23,6 +23,10 @@ body {
     position: relative;
 }
 
+img{
+    color: #582e6600;
+}
+
 .blurAlrededor {
     position: relative;
     box-shadow: inset 0 0 50px 50px #582E66;
@@ -131,6 +135,26 @@ main {
     color: #7D6835;
     stroke-width: 0.3rem;
     stroke-linejoin: miter;
+}
+
+.botones_lados{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    z-index: 0;
+}
+
+.botones_lados .btn--izq{
+    position: absolute;
+    left: 0px;
+}
+
+.botones_lados .btn--der{
+    position: absolute;
+    right: 0px;
 }
 
 .logReg{
