@@ -1,0 +1,178 @@
+/*Fuentes*/
+@font-face {
+    font-family: "Irish Grover";
+    src: url(./fonts/IrishGrover-Regular.ttf);
+}
+@font-face {
+    font-family: "Itim";
+    src: url(./fonts/Itim-Regular.ttf);
+}
+h2{
+    font-family: Irish Grover;
+    color: #EBD18E;
+    text-shadow: -1px 0 #331032, 0 1px #331032, 1px 0 #331032, 0 -1px #331032;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border:none;
+}
+/*---------------------------------PARTE DE CRISTINA PARA EL BLUR MORADO Y EL LOGO-------------------*/
+body {
+    background-color: #582E66;
+    scrollbar-color: rgba(255, 0, 0, 0), rgba(0, 0, 255, 0);
+    overflow: hidden;
+}
+.blurAlrededor {
+    box-shadow: inset 0 0 50px 50px #582E66;
+
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+
+}
+#logo {
+    top: 3%;
+    left:50%;
+    height: 15%;
+    position: absolute;
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+
+
+button{
+    outline: none;
+}
+
+button:hover{
+    background-color: #F5E8C7;
+    transition: background-color 0.8s ease-in-out, border-color 0.8s ease-in-out;
+    border-color:#9d8242;
+}
+
+.fondoCasita{
+    background-image: url(./imgs/fondoCasita.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    /**/
+    position: relative;
+    transition: background-size 6s ease-in-out; /* Agregamos la transición suave aquí */
+    overflow: hidden;
+    /*transform: scale(1);*/
+}
+
+.logReg{
+    border: solid #E59FE4 5px;
+    border-radius: 23px;
+    background-image:  linear-gradient(#943f92bd, #4d2859df);
+    /*ALTERNATIVO #943f929f PONER MAS TRANSPARENTE ? */
+    backdrop-filter: blur(5px);
+    /*box-shadow: -1px -1px 73px -11px rgba(232,156,232,1); */
+    box-shadow: -1px -1px 39px -3px rgba(232,156,232,1);
+    height: 75%;
+    width: 24%;
+    text-align: center;
+    margin-left: 5rem;
+    display:flex;
+    flex-direction: column; /*como es column el align items del padre lo pondrá en el centro de arriba a abajo*/
+    align-items: center;
+    gap: 38px;
+    padding:15px 8px;
+    overflow: hidden;
+}
+
+.listaBotones{
+    display: flex; /*alinea los elementos en una sola línea*/
+    flex-wrap: wrap; /*si no caben en una línea te los lleva abajo*/
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.btn{
+    background-color: #EBD18E;
+    border: 5px solid #7D6835;
+    border-radius: 23px;
+    box-shadow: 1px 8px 6px -6px rgba(0,0,0,0.37);
+    font-family: Itim;
+    color:#382e19;
+    font-size: 15px;
+    padding: 0.5rem;
+}
+
+.btn__clicado{
+    background-color: #7D6835;
+    border: 5px solid #382e19;
+    pointer-events: none; /*elimina el hover del botón*/
+}
+
+button:focus, .btn__clicado{
+    box-shadow: inset 1px 8px 6px -6px rgba(0,0,0,0.37);
+}
+
+.logReg__btn{
+    width: 120px;
+}
+
+.btn__enviar{
+    width: 80px;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:55px;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+}
+
+form.registro{ /*---------------------------------------------*/
+    gap:27px;
+    transition: all .3s;
+}
+
+input{
+    background-color: #F5E8C7;
+    width: 80%;
+    height: 30px;
+    border-radius: 23px;
+    /*margin-bottom: 35px;*/
+    text-indent: 10px; /*afecta al placeholder*/
+    font-family: Itim;
+}
+
+input::placeholder{
+    color:#7D6835;
+    font-weight: bold;
+}
+
+input:focus{
+    outline: #EBD18E solid 5px;
+}
+
+.oculto{
+    display: none;
+}
+
+.icono{
+    font-size:15px;
+}
+
+/*--------------------------PRUEBA*/
+.zoomed{
+    transform: scale(2.5); /*aumenta la escala de la imagen*/
+    transform-origin: 80% 70%; /* 80% hacia la derecha y 70% hacia arriba y abajo*/
+    transition: all 2s; /*crea la transición de zoom suave*/
+    overflow: hidden;
+}
