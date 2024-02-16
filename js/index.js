@@ -1,4 +1,7 @@
 'use strict';
+
+import { dispNoneRecursivo } from "./script.js";
+
 //CARGA DEL DOM
 const divBotones = document.querySelector('.listaBotones');
 const arrayBotones = Array.from(divBotones.children);
@@ -6,6 +9,7 @@ const titulo = document.querySelector('#titulo');
 const formulario = document.querySelector('#formulario');
 const inputContraseña2 = document.querySelector('#contraseña2');
 const main = document.querySelector('.fondoCasita');
+const logReg = document.querySelector('.logReg');
 
 
 //FUNCIONES
@@ -41,6 +45,12 @@ const backgroundZoom = function(e){
     if(btnClick.id == "enviar"){
         //main.style.backgroundSize = '140%';
         main.classList.toggle('zoomed');
+        dispNoneRecursivo(logReg);
+
+        setTimeout(
+            function() {
+                window.location.replace('./ppal.html');
+            }, 2000);
     }
 }
 
