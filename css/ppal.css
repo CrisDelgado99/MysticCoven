@@ -109,7 +109,7 @@ main {
     display: none;
 }
 
-.libro__botones .btn, .btn--atras{
+.botones_lados .btn, .btn--atras{
     display: flex;
     justify-content: center;
     align-items: center;
