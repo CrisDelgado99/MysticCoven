@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - MysticCoven</title>
+    <link rel="stylesheet" href="./login.css">
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <main class=" blurAlrededor fondoCasita">
+        <img src="./imgs/logo.png" alt="" id="logo" />
+        <section class="logReg">
+            <div class="listaBotones">
+                <!--autofocus pone el botón como clicado-->
+                <button class="btn logReg__btn btn__clicado" id="inicioSesion" autofocus>Iniciar Sesión</button>
+                <button class="btn logReg__btn" id="registro">Registro</button>
+            </div>
+
+            <h2 id="titulo"><label class="icono">🌙</label>  Iniciar Sesión <label class="icono">✨</label></h2>
+            <form action="" id="formulario">
+                <input type="text" name="usuario" id="" placeholder="Usuario" >
+                <input type="text" name="contraseña" id="" placeholder="Contraseña">
+                <!--input para el registro-->
+                <input type="text" name="contraseña2" id="contraseña2" placeholder="Repita la contraseña" class="oculto">
+                <button class="btn btn__enviar">Enviar</button>
+                <!--con el button del form no hace bien la transición-->
+            </form>
+            <button id="enviar">pruebaFondo</button>
+        </section>
+    </main>
+</body>
+</html>
