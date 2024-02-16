@@ -7,7 +7,7 @@
     font-family: "Itim";
     src: url(./fonts/Itim-Regular.ttf);
 }
-h2{
+h3{
     font-family: Irish Grover;
     color: #EBD18E;
     text-shadow: -1px 0 #331032, 0 1px #331032, 1px 0 #331032, 0 -1px #331032;
@@ -20,38 +20,63 @@ h2{
     border:none;
 }
 
+body {
+    background-color: #582E66;
+    scrollbar-color: rgba(255, 0, 0, 0), rgba(0, 0, 255, 0);
+    overflow: hidden;
+}
+
+main{
+    display: auto;
+}
+
+.blurAlrededor {
+    box-shadow: inset 0 0 50px 50px #582E66;
+
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+
+}
+#logo {
+    top: 3%;
+    left:50%;
+    height: 15%;
+    position: absolute;
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+
+
 button{
     outline: none;
 }
 
+button:hover{
+    background-color: #F5E8C7;
+    transition: background-color 0.8s ease-in-out, border-color 0.8s ease-in-out;
+    border-color:#9d8242;
+}
+
 .fondoCasita{
-    background-image: url(./imgs/fondoCasita.png);
+    background-image: url(./../imgs/fondoCasita.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     display: flex;
     align-items: center;
-}
+    /**/
+    position: relative;
+    transition: background-size 6s ease-in-out; /* Agregamos la transición suave aquí */
+    overflow: hidden;
+    /*transform: scale(1);*/
 
-.logReg{
-    border: solid #E59FE4 5px;
-    border-radius: 23px;
-    background-image:  linear-gradient(#943f92bd, #4d2859df);
-    backdrop-filter: blur(5px);
-    /*box-shadow: -1px -1px 73px -11px rgba(232,156,232,1); */
-    box-shadow: -1px -1px 39px -3px rgba(232,156,232,1);
-    height: 75%;
-    width: 24%;
-    text-align: center;
-    margin-left: 4rem;
-    display:flex;
-    flex-direction: column; /*como es column el align items del padre lo pondrá en el centro de arriba a abajo*/
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 38px;
-    padding:15px 8px;
+    justify-content:flex-start;
 }
 
-/*align items flex start para el form*/
 .listaBotones{
     display: flex; /*alinea los elementos en una sola línea*/
     flex-wrap: wrap; /*si no caben en una línea te los lleva abajo*/
@@ -70,12 +95,14 @@ button{
     box-shadow: 1px 8px 6px -6px rgba(0,0,0,0.37);
     font-family: Itim;
     color:#382e19;
-    font-size: 15px;
+    font-size: 1rem;
+    padding: 0.4rem;
 }
 
 .btn__clicado{
     background-color: #7D6835;
     border: 5px solid #382e19;
+    pointer-events: none; /*elimina el hover del botón*/
 }
 
 button:focus, .btn__clicado{
@@ -83,12 +110,11 @@ button:focus, .btn__clicado{
 }
 
 .logReg__btn{
-    width: 115px;
-    height: 35px;
+    width: 130px;
 }
+
 .btn__enviar{
     width: 80px;
-    height: 39px;
 }
 
 form{
@@ -98,10 +124,12 @@ form{
     gap:55px;
     align-items: center;
     justify-content: center;
+    transition: all .3s;
 }
 
 form.registro{ /*---------------------------------------------*/
     gap:27px;
+    transition: all .3s;
 }
 
 input{
@@ -112,10 +140,11 @@ input{
     /*margin-bottom: 35px;*/
     text-indent: 10px; /*afecta al placeholder*/
     font-family: Itim;
+    padding: 1rem;
 }
 
 input::placeholder{
-    color:#7D6835;
+    color: #7D6835;
     font-weight: bold;
 }
 
@@ -130,9 +159,41 @@ input:focus{
 .icono{
     font-size:15px;
 }
+
+/*--------------------------PRUEBA*/
 .zoomed{
     transform: scale(2.5); /*aumenta la escala de la imagen*/
     transform-origin: 80% 70%; /* 80% hacia la derecha y 70% hacia arriba y abajo*/
     transition: all 2s; /*crea la transición de zoom suave*/
     overflow: hidden;
+}
+
+.displayNone{
+    display: none;
+}
+
+@media only screen and (max-width: 1150px) {
+    .logReg{
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .logReg{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .logReg{
+        width: 80%;
+        height: 90%;
+    }
+}
+
+@media only screen and (max-height: 500px) {
+    .logReg{
+        overflow: scroll;
+        scrollbar-color: #582e66 #f5e8c7;
+    }
 }

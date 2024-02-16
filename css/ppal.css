@@ -57,6 +57,10 @@ h2{
     font-size: 2.8rem;
 }
 
+h3{
+    font-size: 1.8rem;
+}
+
 /*BOTONES GENERALES*/
 
 button{
@@ -143,6 +147,7 @@ main {
     position: absolute;
     left: 1rem;
     top: 1rem;
+    z-index: 10;
 }
 
 .btn--pequenio{
@@ -194,17 +199,16 @@ main {
     border-radius: 23px;
     background-image:  linear-gradient(#943f92bd, #4d2859df);
     backdrop-filter: blur(5px);
-    /*box-shadow: -1px -1px 73px -11px rgba(232,156,232,1); */
     box-shadow: -1px -1px 39px -3px rgba(232,156,232,1);
-    height: 75%;
-    width: 24%;
+    height: 70%;
+    width: 25%;
     text-align: center;
     margin-left: 4rem;
     display:flex;
     flex-direction: column; /*como es column el align items del padre lo pondrá en el centro de arriba a abajo*/
     align-items: center;
     gap: 38px;
-    padding:15px 8px;
+    padding:1.5rem 0.8rem;
     z-index: 6;
 }
 

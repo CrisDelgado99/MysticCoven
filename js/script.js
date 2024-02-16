@@ -8,4 +8,45 @@ const desactivarHover = (elemento, carpeta) => {
     elemento.src = './imgs/' + carpeta + '/' + idElemento + '.png';
 }
 
-export{activarHover, desactivarHover};
+const cambiarBoton = (boton, array, num) => {
+    if(boton.id == 'mas'){
+        if(num == array.length){
+            if(!boton.classList.contains('inactivo')){
+                boton.classList.add('inactivo');
+            }
+        } else {
+            if(boton.classList.contains('inactivo')){
+                boton.classList.remove('inactivo');
+            }
+            
+        }
+    } else if(boton.id == 'menos'){
+        if(num == 1){
+            if(!boton.classList.contains('inactivo')){
+                boton.classList.add('inactivo');
+            }
+        } else {
+            if(boton.classList.contains('inactivo')){
+                boton.classList.remove('inactivo');
+            }
+        }
+    }
+}
+
+const dispNoneRecursivo = (elemento) => {
+    if (!elemento.classList.contains('displayNone')) {
+        elemento.classList.add('displayNone');
+    }
+
+    Array.from(elemento.children).forEach(hijo => dispNoneRecursivo(hijo));
+}
+
+const quitarDispNoneRecursivo = (elemento) => {
+    if (elemento.classList.contains('displayNone')) {
+        elemento.classList.remove('displayNone');
+    }
+
+    Array.from(elemento.children).forEach(hijo => quitarDispNoneRecursivo(hijo));
+}
+
+export{activarHover, desactivarHover, cambiarBoton, dispNoneRecursivo, quitarDispNoneRecursivo};

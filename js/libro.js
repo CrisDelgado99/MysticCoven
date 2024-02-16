@@ -1,5 +1,6 @@
 // IMPORTS
 import { Bruja } from "./Clases/Bruja.js";
+import { cambiarBoton } from "./script.js";
 
 // PARTES DE LA PÁGINA
 const titulo = document.querySelector("#titulo");
@@ -51,8 +52,8 @@ const mostrarBruja = (num) => {
 
 const inicializarPagina = () => {
     mostrarBruja(numBruja);
-    cambiarBoton(botonMas);
-    cambiarBoton(botonMenos);
+    cambiarBoton(botonMas, arrBrujas, numBruja);
+    cambiarBoton(botonMenos, arrBrujas, numBruja);
 };
 
 const pasarHoja = (lado) => {
@@ -66,31 +67,6 @@ const pasarHoja = (lado) => {
         divAnimacion.src = '';
     }, 900);
     
-}
-
-const cambiarBoton = (boton) => {
-    if(boton.id == 'mas'){
-        if(numBruja == arrBrujas.length){
-            if(!boton.classList.contains('inactivo')){
-                boton.classList.add('inactivo');
-            }
-        } else {
-            if(boton.classList.contains('inactivo')){
-                boton.classList.remove('inactivo');
-            }
-            
-        }
-    } else if(boton.id == 'menos'){
-        if(numBruja == 1){
-            if(!boton.classList.contains('inactivo')){
-                boton.classList.add('inactivo');
-            }
-        } else {
-            if(boton.classList.contains('inactivo')){
-                boton.classList.remove('inactivo');
-            }
-        }
-    }
 }
 
 window.onload = inicializarPagina;
@@ -120,6 +96,6 @@ divBotones.addEventListener('click', e => {
     }, 900);
     
 
-    cambiarBoton(botonMas);
-    cambiarBoton(botonMenos);
+    cambiarBoton(botonMas, arrBrujas, numBruja);
+    cambiarBoton(botonMenos, arrBrujas, numBruja);
 });
