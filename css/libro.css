@@ -95,12 +95,6 @@
     font-family: 'Irish Grover';
 }
 
-.clase, .clase svg{
-    border-color: #382e19;
-    background-color: #7D6835;
-    color: #382e19;
-}
-
 #textoBruja{
     cursor: n-resize;
 }

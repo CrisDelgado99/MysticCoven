@@ -59,6 +59,14 @@ h2{
 
 /*BOTONES GENERALES*/
 
+button{
+    transition: background-color 0.8s ease-in-out, border-color 0.8s ease-in-out, color 0.8s ease-in-out;
+}
+
+button > svg{
+    transition: color 0.8s ease-in-out, background-color 0.8s ease-in-out;
+}
+
 .btn{
     background-color: #EBD18E;
     border: 5px solid #7D6835;
@@ -68,10 +76,22 @@ h2{
     color:#382e19;
     font-size: 1.2rem;
     cursor: pointer;
+    padding: 0.5rem;
 }
 
 button:focus{
     box-shadow: inset 1px 8px 6px -6px rgba(0,0,0,0.37);
+}
+
+button:hover{
+    background-color: #F5E8C7;
+    transition: background-color 0.8s ease-in-out, border-color 0.8s ease-in-out;
+    border-color: #9d8242;
+}
+
+button > svg:hover{
+    color: #9d8242;
+    transition: color 0.8s ease-in-out, background-color 0.8s ease-in-out;
 }
 
 
@@ -135,6 +155,18 @@ main {
     color: #7D6835;
     stroke-width: 0.3rem;
     stroke-linejoin: miter;
+}
+
+.inactivo{
+    border-color: #382e19;
+    background-color: #7D6835;
+    color: #382e19;
+    pointer-events: none;
+}
+
+.inactivo svg{
+    color: #382e19;
+    pointer-events: none;
 }
 
 .botones_lados{

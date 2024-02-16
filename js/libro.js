@@ -6,7 +6,7 @@ const titulo = document.querySelector("#titulo");
 const imagen = document.querySelector("#imagen");
 const textoBruja = document.querySelector("#textoBruja");
 
-const divBotones = document.querySelector(".libro__botones");
+const divBotones = document.querySelector(".botones_lados");
 
 const botonMas = document.querySelector("#mas");
 const botonMenos = document.querySelector("#menos");
@@ -71,23 +71,23 @@ const pasarHoja = (lado) => {
 const cambiarBoton = (boton) => {
     if(boton.id == 'mas'){
         if(numBruja == arrBrujas.length){
-            if(!boton.classList.contains('clase')){
-                boton.classList.add('clase');
+            if(!boton.classList.contains('inactivo')){
+                boton.classList.add('inactivo');
             }
         } else {
-            if(boton.classList.contains('clase')){
-                boton.classList.remove('clase');
+            if(boton.classList.contains('inactivo')){
+                boton.classList.remove('inactivo');
             }
             
         }
     } else if(boton.id == 'menos'){
         if(numBruja == 1){
-            if(!boton.classList.contains('clase')){
-                boton.classList.add('clase');
+            if(!boton.classList.contains('inactivo')){
+                boton.classList.add('inactivo');
             }
         } else {
-            if(boton.classList.contains('clase')){
-                boton.classList.remove('clase');
+            if(boton.classList.contains('inactivo')){
+                boton.classList.remove('inactivo');
             }
         }
     }
@@ -104,7 +104,7 @@ divBotones.addEventListener('click', e => {
             numBruja++;
             console.log(numBruja);
         } else if(numBruja == arrBrujas.length){
-            boton.classList.add('clase');
+            boton.classList.add('inactivo');
         }
 
     } else if (boton.id == 'menos') {
