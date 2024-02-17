@@ -59,7 +59,7 @@ h2{
 
 .headerBonito{
     font-family: Irish Grover;
-    color: #EBD18E;
+    color: #7D6835;
     text-shadow: -1px 0 #331032, 0 1px #331032, 1px 0 #331032, 0 -1px #331032;
 }
 
@@ -216,6 +216,7 @@ main {
     gap: 38px;
     padding:1.5rem 0.8rem;
     z-index: 6;
+    overflow: scroll;
 }
 
 .bodyBlur{

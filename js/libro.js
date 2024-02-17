@@ -5,7 +5,7 @@ import { cambiarBoton } from "./script.js";
 // PARTES DE LA PÁGINA
 const titulo = document.querySelector("#titulo");
 const imagen = document.querySelector("#imagen");
-const textoBruja = document.querySelector("#textoBruja");
+const texto = document.querySelector("#texto");
 
 const divBotones = document.querySelector(".botones_lados");
 
@@ -47,7 +47,7 @@ let numBruja = 1;
 
 const mostrarBruja = (num) => {
     const bruja = arrBrujas.find(bruja => bruja.id === num);
-    bruja.impBruja(titulo, imagen, textoBruja);
+    bruja.impBruja(titulo, imagen, texto);
 };
 
 const inicializarPagina = () => {
@@ -79,9 +79,7 @@ divBotones.addEventListener('click', e => {
             pasarHoja('Derecha');
             numBruja++;
             console.log(numBruja);
-        } else if(numBruja == arrBrujas.length){
-            boton.classList.add('inactivo');
-        }
+        } 
 
     } else if (boton.id == 'menos') {
         if (numBruja > 1) {
