@@ -57,6 +57,12 @@ h2{
     font-size: 2.8rem;
 }
 
+.headerBonito{
+    font-family: Irish Grover;
+    color: #EBD18E;
+    text-shadow: -1px 0 #331032, 0 1px #331032, 1px 0 #331032, 0 -1px #331032;
+}
+
 h3{
     font-size: 1.8rem;
 }

@@ -7,6 +7,9 @@ export class Objeto{
     }
 
     //setters
+    setId(id){
+        this.id = id;
+    }
     setTitulo(titulo){
         this.titulo = titulo;
     }
@@ -20,6 +23,9 @@ export class Objeto{
     }
 
     //getters
+    getId(){
+        return this.id;
+    }
     
     getTitulo(){
         return this.titulo;
