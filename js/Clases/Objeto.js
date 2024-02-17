@@ -42,8 +42,7 @@ export class Objeto{
     //otros métodos
     impObjeto(contTitulo, contImg, contDescripcion) {
         contTitulo.innerHTML = this.titulo;
-        contImg.alt = this.titulo;
-        contImg.src = this.img;
+        contImg.style.backgroundImage = "url('" + this.img + "')";
         contDescripcion.innerHTML = this.descripcion;
     }
 }

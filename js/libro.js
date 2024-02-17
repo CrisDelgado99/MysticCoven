@@ -1,7 +1,6 @@
 // IMPORTS
 import { Bruja } from "./Clases/Bruja.js";
 import { cambiarBoton } from "./script.js";
-import { inicializarPagina } from "./script.js";
 
 // PARTES DE LA PÁGINA
 const titulo = document.querySelector("#titulo");
@@ -51,6 +50,12 @@ const mostrarBruja = (num) => {
     bruja.impBruja(titulo, imagen, textoBruja);
 };
 
+const inicializarPagina = () => {
+    mostrarBruja(numBruja);
+    cambiarBoton(botonMas, arrBrujas, numBruja);
+    cambiarBoton(botonMenos, arrBrujas, numBruja);
+};
+
 const pasarHoja = (lado) => {
 
     divAnimacion.src = '';
@@ -64,7 +69,7 @@ const pasarHoja = (lado) => {
     
 }
 
-window.onload = inicializarPagina(numBruja, arrBrujas);
+window.onload = inicializarPagina;
 
 divBotones.addEventListener('click', e => {
     const boton = e.target.closest('button');
