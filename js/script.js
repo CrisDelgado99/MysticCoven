@@ -49,4 +49,10 @@ const quitarDispNoneRecursivo = (elemento) => {
     Array.from(elemento.children).forEach(hijo => quitarDispNoneRecursivo(hijo));
 }
 
-export{activarHover, desactivarHover, cambiarBoton, dispNoneRecursivo, quitarDispNoneRecursivo};
+const inicializarPagina = (num, array) => {
+    mostrarBruja(num);
+    cambiarBoton(botonMas, array, num);
+    cambiarBoton(botonMenos, array, num);
+};
+
+export{activarHover, desactivarHover, cambiarBoton, dispNoneRecursivo, quitarDispNoneRecursivo, inicializarPagina};
