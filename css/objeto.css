@@ -1,0 +1,59 @@
+.botones_lados{
+    width: 95%;
+}
+
+
+
+.botones_lados .btn{
+    z-index: 100;
+}
+
+.objeto {
+    display: grid;
+    grid-template-rows: 1.5fr repeat(3, 1fr) 0.5fr;
+    grid-template-columns: 0.5fr repeat(4, 1fr);
+    width: 80%;
+    height: 80%;
+    margin-top: 5rem;
+    left: 1rem;
+    position: relative;
+}
+
+.objeto__imagen {
+    grid-row: 2 / span 4; /* Cambiado a grid-row */
+    grid-column: 1 / span 2; /* Cambiado a grid-column */
+    position: relative;
+    background-image: url(./../imgs/objetos/GatoConSombra.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: all .5s;
+}
+
+.objeto__info {
+    grid-row: 1 / span 4; /* Cambiado a grid-row */
+    grid-column: 3 / span 3; /* Cambiado a grid-column */
+    position: relative;
+    min-height: 20rem;
+    background-image: url(./../imgs/objetos/bocadilloMagico.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 5rem;
+    bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.objeto__info > p{
+    overflow: auto;
+    scrollbar-color: #582e66 #f5e8c7;
+    scrollbar-width: thin;
+    text-align: justify;
+    margin: 1rem 2rem;
+    padding: 0rem 2rem;
+    transition: all .5s;
+}
+
+.objeto__info > h1{
+    transition: all .5s;
+}
