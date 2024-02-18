@@ -33,7 +33,9 @@
     grid-row: 1 / span 4; /* Cambiado a grid-row */
     grid-column: 3 / span 3; /* Cambiado a grid-column */
     position: relative;
-    min-height: 10rem;
+
+    min-height: 20rem;
+
     background-image: url(./../imgs/objetos/bocadilloMagico.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -58,6 +60,12 @@
     transition: all .5s;
 
     min-height: 5rem;
+
+}
+
+.objeto__info > h1{
+    transition: all .5s;
+
 }
 
 .objeto__info > h1{
