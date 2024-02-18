@@ -132,6 +132,8 @@
     .libro__pag{
         padding: 0.5rem;
         padding-top: 2rem;
+
+        overflow-x: hidden;
     }
 
     #titulo{
