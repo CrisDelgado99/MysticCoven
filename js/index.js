@@ -51,12 +51,14 @@ const cambiarLogReg = function(e){
     const btnClick = e.target;
 
     if(btnClick.id == "registro"){
+        mensajeError.innerHTML = '';
         titulo.innerHTML = '<label class="icono">🌙</label> Registro <label class="icono">✨</label>';
         formulario.classList.add('registro');
         inputUsuario.classList.add("registro");
         //formulario.appendChild(nuevoInput);
         inputPass2.style.display = 'block';
     } else {
+        mensajeError.innerHTML = '';
         titulo.innerHTML = '<label class="icono">🌙</label> Iniciar Sesión <label class="icono">✨</label>';
         inputUsuario.classList.remove("registro");
         formulario.classList.remove('registro');

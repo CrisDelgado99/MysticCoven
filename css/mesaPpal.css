@@ -4,6 +4,12 @@
     right: 1rem;
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #mesa {
     display: flex;
     flex-direction: column;
@@ -12,7 +18,6 @@
     bottom: 0px;
     height: 70%;
     width: 90%;
-
 }
 
 .cerrarSesion{
@@ -122,9 +127,10 @@
 @media only screen and (max-width: 900px) {
     .mesa__elemento--bola, #etiquetaBola {
         height: 40%;
-        top: 0;
+        top: 10%;
         left: 50%;
         transform: translateX(-50%);
+        
     }
 
     #etiquetaBola{
@@ -144,7 +150,7 @@
     .mesa__elemento--noticias, #etiquetaNoticias {
         height: 40%;
         bottom: 25%;
-        left: 41%;
+        left: 35%;
     }
 
     #etiquetaNoticias{
@@ -153,7 +159,7 @@
 
     .mesa__elemento--sombrero, #etiquetaSombrero {
         height: 40%;
-        top: 5%;
+        top: 15%;
         left: 15%;
     }
 
@@ -176,8 +182,89 @@
     }
 }
 
-.displayNone{
-    display: none;
+
+@media only screen and (max-height: 550px){
+    .mesa__elemento--bola{
+        height: 60%;
+    }
+    .mesa__elemento--grimorio{
+        height: 60%;
+    }
+    .mesa__elemento--noticias{
+        height: 60%;
+        bottom: 5%;
+    }
+    .mesa__elemento--runas{
+        height: 60%;
+        bottom: -5%;
+    }
+    .mesa__elemento--sombrero{
+        height: 60%;
+    }
+}
+
+@media only screen and (max-height: 400px){
+    .mesa__elemento--bola{
+        height: 70%;
+    }
+    .mesa__elemento--grimorio{
+        height: 70%;
+    }
+    .mesa__elemento--noticias{
+        height: 70%;
+        bottom: 5%;
+    }
+    .mesa__elemento--runas{
+        height: 70%;
+        bottom: -5%;
+    }
+    .mesa__elemento--sombrero{
+        height: 70%;
+    }
+}
+
+@media only screen and (max-width: 650px) and (min-height: 550px){
+    .mesa__elemento--bola{
+        top: 15%;
+        height: 30%;
+    }
+    .mesa__elemento--grimorio{
+        height: 30%;
+    }
+    .mesa__elemento--noticias{
+        height: 30%;
+    }
+    .mesa__elemento--runas{
+        height: 30%;
+    }
+    .mesa__elemento--sombrero{
+        height: 30%;
+    }
+}
+
+@media only screen and (max-width: 650px) and (max-height: 550px){
+    .mesa__elemento--bola{
+        top: 15%;
+        height: 50%;
+    }
+    .mesa__elemento--grimorio{
+        height: 50%;
+    }
+    .mesa__elemento--noticias{
+        height: 50%;
+        bottom: -5%;
+    }
+    .mesa__elemento--runas{
+        height: 50%;
+    }
+    .mesa__elemento--sombrero{
+        left: 5%;
+        height: 50%;
+    }
 }
 
 
+
+.displayNone{
+    display: none;
+}

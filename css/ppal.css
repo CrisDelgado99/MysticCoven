@@ -107,6 +107,7 @@ button > svg:hover{
 
 .fondoPpal{
     background-image: url('./../imgs/fondoBrujasExpand.jpg');
+    background-size: 100% 150%;
 }
 
 .fondoEstanteria{

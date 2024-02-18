@@ -211,4 +211,19 @@
 
 }
 
+@media only screen and (max-width: 580px) and (max-height: 400px) {
+    .libro__pag{
+        padding: 2rem;
+        overflow-y: scroll;
+    }
+
+    .pag2{
+        max-height: 50%;
+    }
+
+    .botones_lados .btn{
+        z-index: 10;
+    }
+}
+
 
