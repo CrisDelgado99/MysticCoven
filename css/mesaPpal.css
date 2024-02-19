@@ -22,10 +22,14 @@ main{
 
 .cerrarSesion{
     padding: 1rem;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     scrollbar-color: #582E66 #F5E8C7;
     position: relative;
     width: 40%;
+
+    
+
 }
 
 .mesa__elemento, .mesa__etiqueta{

@@ -42,13 +42,12 @@ const btnApagadoEncendido = function(e){
             btn.classList.remove("btn__clicado");
         }else{
             btn.classList.add("btn__clicado");
-            btn.style.disa
         }
     });
 };
 
 const cambiarLogReg = function(e){
-    const btnClick = e.target;
+    const btnClick = e.target.closest('button');
 
     if(btnClick.id == "registro"){
         mensajeError.innerHTML = '';
